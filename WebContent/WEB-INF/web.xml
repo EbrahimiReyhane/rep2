@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:web="http://xmlns.jcp.org/xml/ns/javaee">
+  <servlet>
+    <servlet-name>saveServlet</servlet-name>
+    <servlet-class>RezerveTicketServlet.saveServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>saveServlet</servlet-name>
+    <url-pattern>/saveServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>f1</filter-name>
+    <filter-class>RezerveTicketServlet.MyFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>f1</filter-name>
+    <url-pattern>/saveServlet</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>ViweServlet</servlet-name>
+    <servlet-class>RezerveTicketServlet.ViweServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViweServlet</servlet-name>
+    <url-pattern>/ViweServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>f2</filter-name>
+    <filter-class>RezerveTicketServlet.filter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>f2</filter-name>
+    <url-pattern>/ViweServlet</url-pattern>
+  </filter-mapping>
+</web-app>
